@@ -39,5 +39,5 @@ else {
     <textarea rows="10" cols="50" name="message"></textarea>
     <input type="submit" value="Send pigeon">
 </form>
-<?
+<?php
 }

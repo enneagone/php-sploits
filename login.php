@@ -5,7 +5,7 @@ require_once 'dbfuncs.php';
 if($_SERVER['REQUEST_METHOD'] == "POST") {
     if(!empty($_REQUEST['username']) && !empty($_REQUEST['password'])) {
         $authSQL = "select * from users where username = '" . $_REQUEST['username'] .
-           "' and password = '" . $_REQUEST['password'] . "'"; 
+           "' and password = '" . $_REQUEST['password'] . "'";
         $authed = getSelect($authSQL);
 
         if(!$authed) {
@@ -22,6 +22,9 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
         }
     }
 }
+elseif($_SESSION['authed'] == true){
+	echo 'Welcome ' . $_SESSION['username'];
+}
 else {
 ?>
 <form method="POST">
@@ -31,5 +34,5 @@ else {
     <input name="password" id="password" /> <br />
     <input type="submit" value="Login!">
 </form>
-<?
-}
+<?php
+} 

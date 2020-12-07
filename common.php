@@ -2,12 +2,11 @@
 error_reporting(E_ALL);
 session_start();
 $links = array(
-                'User Filter' => '/index.php?username=jared',
                 'Login' => '/login.php', 
                 'Send Message' => '/sendmessage.php', 
                 'View Messages' => '/messages.php', 
-                'Edit Profile' => '/editprofile.php',
-		'Load Template' => '/template.php?load=loadme'
+		'Edit Profile' => '/editprofile.php',
+		'Logout' => '/logout.php',
           );
 
 if(!empty($_SESSION['authed']) && $_SESSION['authed'] === true) {

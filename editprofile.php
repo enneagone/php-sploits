@@ -41,7 +41,7 @@ if(!empty($_SESSION['authed']) && $_SESSION['authed'] === true) {
             <input name="email" id="email" value="<?=$user[0]?>" /> <br />
             <input type="submit" value="Update profile">
         </form>
-        <?
+        <?php
         }
     }
 }
