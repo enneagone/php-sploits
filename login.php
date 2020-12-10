@@ -10,7 +10,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
 
         if(!$authed) {
             echo 'Invalid login.<br>';
-            echo 'SQL Used: ' . $authSQL;
+	    error_log('Connection failed: ' . $_REQUEST['username']);
             die;
         }
         else {
@@ -21,9 +21,6 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
             $_SESSION['username'] = $authed[0][1];
         }
     }
-}
-elseif($_SESSION['authed'] == true){
-	echo 'Welcome ' . $_SESSION['username'];
 }
 else {
 ?>

@@ -1,6 +1,4 @@
--- Table structure for table `invoices`
---
-USE sydphp;
+USE acroquelois;
 
 DROP TABLE IF EXISTS `invoices`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
