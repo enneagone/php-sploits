@@ -10,7 +10,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
 
         if(!$authed) {
             echo 'Invalid login.<br>';
-	    error_log('Connection failed: ' . $_REQUEST['username']);
+	    error_log('Loglevel: WARNING | Connection failed: ' . $_REQUEST['username']);
             die;
         }
         else {
