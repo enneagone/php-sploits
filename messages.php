@@ -11,11 +11,10 @@ if(!empty($_SESSION['authed']) && $_SESSION['authed'] === true) {
         echo "<div id='message-container'>";
         echo "<h2>Here are messages people have sent you!</h2>";
         echo "<table width='50%'>";
-        echo "<tr><td>Subject</td><td>Message</td>";
+        echo "<tr><td><strong>Subject</strong></td><td><strong>Message</strong></td>";
         if(!empty($messages) && is_array($messages)) {
             foreach($messages as $message) {
-                echo "<tr><td><strong>" . $message[2] . "</strong></td><td>" . $message[3] .
-                "</td></tr>";
+                echo "<tr><td>" . $message[2] . "</td><td><i>" . $message[3] . "</i></td></tr>";
             }
         }
         echo "</table>";
