@@ -21,6 +21,6 @@ if(!empty($_SESSION['authed']) && $_SESSION['authed'] === true) {
     }
 }
 else {
-    header('location: /login.php');
+    header('location: /');
     die;
 }

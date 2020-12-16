@@ -33,11 +33,6 @@ if(!empty($_SESSION['authed']) && $_SESSION['authed'] === true) {
         ?>
         <form>
             <div class="form-row profile-row">
-                <div class="col-md-4 relative">
-                    <div class="avatar">
-                        <div class="avatar-bg center"></div>
-                    </div><input type="file" class="form-control" name="avatar-file">
-                </div>
                 <div class="col-md-8">
                     <h1>Profile </h1>
                     <hr>
@@ -69,3 +64,8 @@ if(!empty($_SESSION['authed']) && $_SESSION['authed'] === true) {
         }
     }
 }
+else {
+    header('location: /');
+    die;
+}
+
