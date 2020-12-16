@@ -14,11 +14,11 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
             die;
         }
         else {
-            echo 'Success, you authed! <br>';
-            echo 'SQL Used: ' . $authSQL;
             $_SESSION['authed'] = true;
             $_SESSION['userid'] = $authed[0][0];
             $_SESSION['username'] = $authed[0][1];
+            header('location: /messages.php');
+            die;
         }
     }
 }

@@ -38,13 +38,13 @@ if(!empty($_SESSION['authed']) && $_SESSION['authed'] === true) {
                     <hr>
                     <div class="form-row">
                         <div class="col-sm-12 col-md-6">
-                            <div class="form-group"><label>Firstname </label><input class="form-control" type="text" name="firstname"></div>
+                            <div class="form-group"><label>Firstname </label><input class="form-control" type="text" name="firstname" value="<?=$user[1]?>"></div>
                         </div>
                         <div class="col-sm-12 col-md-6">
-                            <div class="form-group"><label>Lastname </label><input class="form-control" type="text" name="surname"></div>
+                            <div class="form-group"><label>Lastname </label><input class="form-control" type="text" name="surname" value="<?=$user[2]?>"></div>
                         </div>
                     </div>
-                    <div class="form-group"><label>Email </label><input class="form-control" type="email" autocomplete="off" required="" name="email"></div>
+                    <div class="form-group"><label>Email </label><input class="form-control" type="email" autocomplete="off" required="" name="email" value="<?=$user[0]?>"></div>
                     <div class="form-row">
                         <div class="col-sm-12 col-md-6">
                             <div class="form-group"><label>Password </label><input class="form-control" type="password" name="password" autocomplete="off" required=""></div>
