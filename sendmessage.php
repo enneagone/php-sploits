@@ -23,21 +23,28 @@ else {
     $userList = getSelect($userSQL);
 
     if(!$userList) die('Unable to retrieve users to message');
-    $select = "<select name='user' id='user'>";
+    $select = "<select name='user' id='user' class='form-control'>";
     foreach($userList as $user)
         $select .= "<option value='" . $user[0] . "'>" . $user[1]
         . " " . $user[2] . "</option>";
     $select .= "</select>";
 ?>
-<form method="POST">
-    <p>Select a user you wish to message</p>
-    <label for="user">User:</label>
-    <?=$select?> <br/>
-    <label for="subject">Subject:</label>
-    <input name="subject" id="subject" /> <br />
-    <label for="message">Message:</label>
-    <textarea rows="10" cols="50" name="message"></textarea>
-    <input type="submit" value="Send pigeon">
-</form>
+<div class="contact-clean">
+    <form method="POST">
+        <h2 class="text-center"><br>Select a user you wish to message<br></h2>
+        <div class="form-group">
+                <h1>User:</h1>
+                <?=$select?>
+        </div>
+        <div class="form-group">
+                <h1>Subject :</h1><input class="form-control" type="text"  name="subject"><small class="form-text text-danger"></small>
+        </div>
+        <div class="form-group"><textarea class="form-control" name="message" placeholder="Message" rows="14"></textarea></div>
+        <div class="form-group"><button class="btn btn-primary" type="submit" value="Send pigeon">send </button></div>
+    </form>
+</div>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="assets/js/Profile-Edit-Form.js"></script>
 <?php
 }

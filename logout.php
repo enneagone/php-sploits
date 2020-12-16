@@ -7,13 +7,3 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
 	header('Location:/login.php');
 	exit();
 }
-elseif($_SESSION['authed'] == true){
-?>
-<form method="POST">
-    <input type="submit" value="Logout">
-</form>
-<?php
-}
-else {
-	echo 'Not connected';
-}
