@@ -32,7 +32,7 @@ if(!empty($_SESSION['authed']) && $_SESSION['authed'] === true) {
             $user = $userList[0];
         ?>
         <form>
-            <div class="form-row profile-row">
+            <div class="contact-clean">
                 <div class="col-md-8">
                     <h1>Profile </h1>
                     <hr>

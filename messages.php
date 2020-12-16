@@ -7,17 +7,18 @@ if(!empty($_SESSION['authed']) && $_SESSION['authed'] === true) {
         $msgSQL = "select * from messages where user_id = " .
                     $_SESSION['userid'];
         $messages = getSelect($msgSQL);
-
-        echo "<p>Here are messages people have sent you!</p>";
+        echo "<div id='message-container'>"
+        echo "<h2>Here are messages people have sent you!</h2>";
         echo "<table width='50%'>";
         echo "<tr><td>Subject</td><td>Message</td>";
         if(!empty($messages) && is_array($messages)) {
             foreach($messages as $message) {
-                echo "<tr><td>" . $message[2] . "</td><td>" . $message[3] .
+                echo "<tr><td><strong>" . $message[2] . "</strong></td><td>" . $message[3] .
                 "</td></tr>";
             }
         }
         echo "</table>";
+        echo "</div>"
     }
 }
 else {
