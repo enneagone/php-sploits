@@ -9,8 +9,8 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
         $authed = getSelect($authSQL);
 
         if(!$authed) {
-            echo 'Invalid login.<br>';
-	    error_log('Loglevel: WARNING | Connection failed: ' . $_REQUEST['username']);
+            echo '<script>alert("Invalid login")</script>'; 
+	        error_log('Loglevel: WARNING | Connection failed: ' . $_REQUEST['username']);
             die;
         }
         else {
