@@ -22,6 +22,10 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
         }
     }
 }
+else if(!empty($_SESSION['authed']) && $_SESSION['authed'] === true) {
+    header('location: /message.php');
+    die;
+}
 else {
 ?>
 <div class="login-dark">
