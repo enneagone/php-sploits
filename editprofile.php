@@ -45,14 +45,6 @@ if(!empty($_SESSION['authed']) && $_SESSION['authed'] === true) {
                         </div>
                     </div>
                     <div class="form-group"><label>Email </label><input class="form-control" type="email" autocomplete="off" required="" name="email" value="<?=$user[0]?>"></div>
-                    <div class="form-row">
-                        <div class="col-sm-12 col-md-6">
-                            <div class="form-group"><label>Password </label><input class="form-control" type="password" name="password" autocomplete="off" required=""></div>
-                        </div>
-                        <div class="col-sm-12 col-md-6">
-                            <div class="form-group"><label>Confirm Password</label><input class="form-control" type="password" name="confirmpass" autocomplete="off" required=""></div>
-                        </div>
-                    </div>
                     <hr>
                     <div class="form-row">
                         <div class="col-md-12 content-right"><button class="btn btn-primary form-btn"  type="submit" value="Update profile">SAVE </button><button class="btn btn-danger form-btn" type="reset">CANCEL </button></div>
